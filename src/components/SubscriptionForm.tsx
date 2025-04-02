@@ -1,4 +1,6 @@
-import React from 'react';
+"use client"
+
+import React, { useState } from 'react';
 
 type SubscriptionFormProps = {
   onSubmit: (data: { email: string; firstName: string; lastName: string; consent: boolean }) => void;
@@ -13,11 +15,11 @@ const SubscriptionForm: React.FC<SubscriptionFormProps> = ({
   error, 
   success 
 }) => {
-  const [email, setEmail] = React.useState('');
-  const [firstName, setFirstName] = React.useState('');
-  const [lastName, setLastName] = React.useState('');
-  const [consent, setConsent] = React.useState(false);
-  const [formErrors, setFormErrors] = React.useState<{
+  const [email, setEmail] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [consent, setConsent] = useState(false);
+  const [formErrors, setFormErrors] = useState<{
     email?: string;
     consent?: string;
   }>({});

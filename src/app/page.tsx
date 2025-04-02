@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState, useEffect } from 'react';
 import { hasCookie, setCookie } from 'cookies-next';
 import SubscriptionForm from '@/components/SubscriptionForm';
